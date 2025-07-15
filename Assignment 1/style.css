@@ -23,14 +23,30 @@ nav{
     
 }
 
+.navbar a:hover {
+   
+    color: rgb(78, 32, 195);
+    border-radius: 5px;
+}
+
 .navbar{
     padding: 10px;
 }
-.sidebar
+.sidebar a
 {
-    color: #ffffff ;border-color: #F27073;
-  -size: 14px;background-color: #e78889; text-align: center;
-  text-decoration: none;
+    text-decoration: none;
+    color: #ffffff ;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    background-color: #f27073;
+    padding: 10px;
+    display: inline-block;
+}
+.sidebar a:hover{
+    color: #180202;
 }
 
 .footer{
