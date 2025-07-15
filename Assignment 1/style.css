@@ -1,0 +1,38 @@
+
+header{
+    display: flex;
+  justify-content: space-between;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    /* background-color: rgb(182, 182, 224); */
+    background-size: cover;
+    background-position: 50%;
+     background-repeat: no-repeat;
+    padding: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    /* background-color: rgb(229, 220, 238); */
+    justify-content:left;
+}
+.navbar a{
+    display: inline;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.navbar{
+    padding: 10px;
+}
+.sidebar
+{
+    color: #ffffff ;border-color: #F27073;
+  -size: 14px;background-color: #e78889; text-align: center;
+  text-decoration: none;
+}
+
+.footer{
+    text-align: center;
+}
