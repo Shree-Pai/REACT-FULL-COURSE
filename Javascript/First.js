@@ -198,10 +198,26 @@
 // console.log(data.indexOf(10)); // to get the index of any element in Array
 // console.log(data.lastIndexOf(10)); // to get the last occurence of the element
 
-let data=[90,60,40,70,10,80,20,30,50];
-console.log(data);
+// let data=[90,60,40,70,10,80,20,30,50];
+// console.log(data);
 
-//data.sort();
-data.reverse();
-console.log(data);
+// //data.sort(); 
+// data.reverse();
+// console.log(data);
 
+//Write a program to sort a Array in Ascending order
+
+let data=[10,20,60,300,250,600]
+let sort_data=[];
+let temp=[];
+console.log(data);
+for(let i=0;i<data.length;i++){
+    temp=data[i];
+    for(let j=i+1;j<data.length;j++){
+        if(data[i]>data[j]){
+            sort_data[i]=data[j];
+            data[j]=data[i];
+        }
+    }
+}
+console.log(sort_data);
