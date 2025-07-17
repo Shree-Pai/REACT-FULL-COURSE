@@ -211,7 +211,7 @@ let data = [10, 20, 60, 300, 250, 600];
 let sort_data = [...data];
 console.log("Original Data:", data);
 for (let i = 0; i < sort_data.length - 1; i++) {
-    for (let j = 0; j < sort_data.length - 1 - i; j++) {
+    for (let j = i+1; j < sort_data.length - 1 ; j++) {
         if (sort_data[j] > sort_data[j + 1]) {
             let temp = sort_data[j];
             sort_data[j] = sort_data[j + 1];
