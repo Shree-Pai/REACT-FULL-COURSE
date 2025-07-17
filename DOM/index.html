@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On and Off</title>
+</head>
+<body>
+    <div>
+        <img id="image" src="https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940171g57vp25a8k.png" width="30%" height="30%" alt=" onbulb">
+        <br><br>
+        <button onclick="turnOff()">Off</button>
+        <button onclick="turnOn()">On</button>
+        <button id="toogle" onclick="toggleBulb()">On</button>
+    </div>
+</body>
+<script>
+    const turnOff=()=>{
+            let img_obj=document.getElementById("image");
+            img_obj.setAttribute("src","https://toppng.com/uploads/preview/light-bulb-on-off-png-115539402943y50vxr5yi.png")
+        }
+        const turnOn=()=>{
+            let img_obj=document.getElementById("image");
+            img_obj.setAttribute("src","https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940171g57vp25a8k.png")
+        }
+        const toggleBulb=()=>{
+            let img_obj=document.getElementById("image");
+            let srcValue=img_obj.getAttribute("src");
+
+            let btn_obj=document.getElementById("toogle");
+            let btn_text=btn_obj.innerHTML;
+
+            if(srcValue=="https://toppng.com/uploads/preview/light-bulb-on-off-png-115539402943y50vxr5yi.png"){
+                turnOn();
+                btn_obj.innerHTML="Off";
+            }
+            else{
+                turnOff();
+                btn_obj.innerHTML="On";
+            }
+            
+        }
+</script>
+</html>

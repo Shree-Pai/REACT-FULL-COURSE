@@ -6,10 +6,56 @@
     <title>Javascript</title>
 </head>
 <body>
-    <h1>Javascript</h1>
+    <h1 >Javascript</h1>
+    <h1 class="head1">First heading</h1>
+    <br><br>
+    <a id="url" href="https://www.google.com">Google</a>
+    <br><br>
+    <button onclick="handleClick()">Get</button>
+    <button onclick="setAtt()">Set</button>
 
-    <script src="First.js">
 
+    <!-- <h2 class="head2">Second heading</h2>
+    <h3 class="head1">Third heading</h3>
+    <h4 class="head1">Fourth heading</h4>
+    <p id="p1">First paragraph</p>
+    <p id="p2">Second paragraph</p>
+    <p id="p3">Third paragraph</p>
+    <p id="p4">Fourth paragraph</p> -->
+
+    <script>
+        // let p_obj=document.getElementById("p2");
+        // console.log(p_obj);
+        // p_obj.style.color="red";
+
+        // let head_obj=document.getElementsByClassName("head1");
+
+        // console.log(head_obj);
+        // head_obj[1].style.color="blue";
+
+        // let obj=document.getElementsByTagName("p"); 
+        // console.log(obj);
+        
+        // obj[2].style.color="red";
+        
+
+        // let obj=document.querySelector(".head1"); //for class
+        //  let obj=document.querySelector("#p1");   //for id
+        //   let obj=document.querySelector("p");  //selects only 1st paragraph
+        // console.log(obj);
+
+        //  let obj=document.querySelectorAll(".head1");
+        //  console.log(obj);
+
+        function handleClick(){
+            let obj=document.getElementById("url");
+            let value=obj.getAttribute("href");
+            console.log(value);
+        }
+        function setAtt(){
+            let obj=document.getElementById("url");
+            obj.setAttribute("href","https://www.chatgpt.com")
+        }
     </script>
 </body>
 </html>
