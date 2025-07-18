@@ -1,69 +1,64 @@
-let firstInput = '';
-let secondInput = '';
-let currentOperator = null;
-let enteringSecond = false;
+let a = '';
+let b = '';
+let op = null;
+let second = false;
 
-function addInput(number) {
-  if (!enteringSecond) {
-    firstInput += number;
-    document.getElementById('display').value = firstInput;
-  } else {
-    secondInput += number;
-    document.getElementById('display').value = firstInput + ' ' + currentOperator + ' ' + secondInput;
-  }
+function putNum(n) {
+if (!second) {
+a += n;
+document.getElementById('display').value = a;
+} else {
+b += n;
+document.getElementById('display').value = a + ' ' + op + ' ' + b;
+}
 }
 
-function operatorInput(operator) {
-  if (firstInput === '') return;
-
-  if (enteringSecond && secondInput !== '') {
-    performCalculation();
-  }
-
-  currentOperator = operator;
-  enteringSecond = true;
-  document.getElementById('display').value = firstInput + ' ' + currentOperator;
+function putOp(o) {
+if (a === '') return;
+if (second && b !== '') {
+getAns();
+}
+op = o;
+second = true;
+document.getElementById('display').value = a + ' ' + op;
 }
 
-function calculate() {
-  if (firstInput === '' || secondInput === '' || !currentOperator) return;
+function getAns() {
+if (a === '' || b === '' || !op) return;
+let x = parseFloat(a)
+let y = parseFloat(b)
+let res
 
-  let num1 = parseFloat(firstInput);
-  let num2 = parseFloat(secondInput);
-  let result;
-
-  switch (currentOperator) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
-    case '/':
-      if (num2 === 0) {
-        alert("Cannot divide by zero");
-        return;
-      }
-      result = num1 / num2;
-      break;
-    default:
-      return;
-  }
-
-  document.getElementById('display').value = result;
-  firstInput = result.toString();
-  secondInput = '';
-  currentOperator = null;
-  enteringSecond = false;
+if (op === '+') {
+res = x + y
+}
+else if (op === '-') {
+res = x - y
+}
+else if (op === '*') {
+res = x * y
+}
+else if (op === '/') {
+if (y === 0) {
+alert("no divide by 0")
+return
+}
+res = x / y
+} else {
+return
 }
 
-function clearCalculator() {
-  firstInput = '';
-  secondInput = '';
-  currentOperator = null;
-  enteringSecond = false;
-  document.getElementById('display').value = '';
+document.getElementById('display').value = res
+a = res.toString()
+b = ''
+op = null
+second = false
+}
+
+function clr() {
+a = ''
+b = ''
+op = null
+second = false
+document.getElementById('display').value = ''
 }
