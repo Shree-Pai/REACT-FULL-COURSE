@@ -7,6 +7,7 @@ callback
 destructuring of function
 default
 Arrow function 
+bactic operator(``)
 
 Javascript is  a dyanamic scripting language
 Its both server and client side scripting language
@@ -54,6 +55,8 @@ Jump Statements:
 ->Array
 Array is the collection of data (need not be similar datatype in js)
 
+*********************************************************************************************************************************************
+
 ->Function
 A group of code grouped together to perform a specific task according to requirements is called function. Can achieve code reusability.
 
@@ -76,7 +79,7 @@ programming interface provided by the browser that allow js to interact and mani
 ->DOM selector:
 method in javascript that help us to select a html element from webpage, so that we can modify,read or delete the element.
 5 types of dom selector:
-->getElementByID()
+->getElementByID() //single element
 ->getElementByClassName() //html collection of elements
 ->getElementByTagName()   //html collection of elements
 ->querySelector() //select 1st matching element
@@ -92,3 +95,18 @@ Task
 On webpage display a bulb is off with 2 button off and on 
 when clicked on On button bulb on when clicked on off turn of bulb
 toggle button- to on and off bulb
+
+*******************************************************************************************************************************************************
+
+Asynchronous Programming
+    Synchronous programming:All task are executed in one after the other in a systematic order
+    js is a single line execution from top to bottom
+
+If more than one task has to be  achieved can be achieved with the help of Asynchronous programming.
+
+Ways to fix the problem with the asynchronous :
+Using callback function //It becomes callback hell when nested callback is used 
+Using Promise - represent a value that may available now,later or never
+              - has 3 states pending-later, resolved-now, rejected-never.
+              - async-awake(async- make a function return a promise,awake- first promise is to be called and then whatever is there going to return)
+

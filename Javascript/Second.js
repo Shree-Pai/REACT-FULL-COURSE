@@ -36,7 +36,7 @@
 // }
 // console.log("Result:",result(10,20));
 
-//shortest way to create a function is a array function
+//shortest way to create a function is a arrow function
 // let display=(name)=>{
 //     console.log("Welcome:",name);
 // }
@@ -51,7 +51,7 @@
 // let display=setTimeout((name)=>{
 //     console.log("Welcome!",name)
 // }, 10000,"Abhi");
-// display;
+// display; // 2 parameter - arrow and time
 
 
 //Callback
@@ -90,7 +90,7 @@ let employee={
 // console.log(employee);
 
 
-// //for in loop for object
+// //for in loop for object access the properties of object
 // for(let key in employee){
 //     console.log("Key:"+key+" Value:"+employee[key]);
 // }
