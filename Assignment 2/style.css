@@ -5,11 +5,11 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #e0e0e0;
+  background: #f8f1f1;
 }
 
 .calculator {
-  background: #cc7070;
+  background: #c26a6a;
   padding: 20px;
   border-radius: 10px;
   width: 260px;
@@ -47,5 +47,5 @@ button {
 }
 
 button:hover {
-  background-color: #de6161;
+  background-color: #ca6161;
 }
