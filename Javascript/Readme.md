@@ -110,3 +110,18 @@ Using Promise - represent a value that may available now,later or never
               - has 3 states pending-later, resolved-now, rejected-never.
               - async-awake(async- make a function return a promise,awake- first promise is to be called and then whatever is there going to return)
 
+ES6(ECMA Script 6 2015):
+Javascript version it gives how to write code
+->let and const
+->arrow function
+->Template Literals - embedded variables inside a string
+->Array and object Destructuring
+->Default Parameters
+->Spread Operators-we can store the the new elements in the array
+->Rest Operators- is used to collect multiple elements in js into a single array or object
+->Class
+->Map & Set-map collection of data elements are stored in the form of keys and values
+->for in and for off loop
+->promise 
+->async awake
+->import export
