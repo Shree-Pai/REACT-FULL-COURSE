@@ -11,10 +11,13 @@ h1 {
   margin-bottom: 20px;
   color: black;
   text-align: center;
+  background-color: blueviolet;
+  padding: 20px;
+  border-radius: 10px 50px;
 }
 #addbutton {
   padding: 15px;
-  background-color: #f8d1d1;
+  background-color: #24b222;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -29,9 +32,14 @@ h1 {
   margin-bottom: 15px;
   padding-right: 10px;
   box-sizing: border-box;
-  background-color: #ebcbcb;
+  background-color: #f0e6ff;
   border-radius: 10px;
 }
+
+#display:hover{
+  background-color: rgb(209, 195, 222);
+}
+
 .todo {
   background: #aba1e4;
   padding: 20px;
@@ -59,5 +67,37 @@ h1 {
 .strikethrough {
     text-decoration: line-through;
     color: gray; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f0e6ff;
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li:hover{
+  background-color: blueviolet;
+}
+
+.deletebutton {
+    background-color: #da2828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.deletebutton:hover {
+    background-color: #c42525;
 }
 

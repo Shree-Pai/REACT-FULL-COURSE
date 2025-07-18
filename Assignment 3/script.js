@@ -8,6 +8,7 @@ const createTask = (taskText) => {
 
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = 'Delete';
+  deleteBtn.classList.add('deletebutton');
   deleteBtn.style.marginLeft = '10px';
 
   deleteBtn.addEventListener('click', (e) => {
