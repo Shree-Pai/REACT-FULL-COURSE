@@ -6,7 +6,7 @@ class Fourth extends Component{
     render(){
         return(
             <div>
-                <h3>This is Class Based Component</h3>
+                <h3>This is Class Based Component in CRA</h3>
             </div>
         )
     }
