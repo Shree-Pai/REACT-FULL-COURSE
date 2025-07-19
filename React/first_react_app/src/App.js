@@ -1,5 +1,6 @@
-// import logo from './logo.svg';
-// import './App.css';
+import { First } from "./first";
+import Fourth from "./Fourth";
+import Second from "./Second";
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
         This is my React App
       </h1>
       <p>This is my React App paragraph</p>
+      <First/>
+      <Second/>
+      <Fourth/>
     </div>
   );
 }

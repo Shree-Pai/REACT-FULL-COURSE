@@ -36,7 +36,14 @@ package.json-list of all dependencies that is used in project and project script
 build-converts a respective React component to its html,css and js because browser will now understand React.
 app.js cannot return multiple components to return the multiple components then wrap it inside a single element. There should be only 1 parent element.
 
- Creates the libraries to 
- npm create vite@latest second_react_app
+Creates the only the req libraries 
+npm create vite@latest second_react_app
+in vite tool there is no index.js file so the file path has to be given in index.html
+.jsx - js with html
 
-
+Purpose of Components: Smallest reusable code.
+                       Break our app to reusable parts.
+                       Each component is a mini user interface unit.
+                       Combined multiple components to build complex user interface.
+                       2 types of components-Functional Component - created by function keyword-modern way to create a component
+                                            -Class Component - created by class-older way to create a component
