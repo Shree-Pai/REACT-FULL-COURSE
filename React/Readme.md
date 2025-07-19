@@ -25,3 +25,18 @@ Mobile based
 React
 React Native
 
+node_modules-contains all the libraries required to run the project.
+public folder-contains all the static assets assessicible through root url.
+src folder-can create own components.
+app.js-is a component.
+manifest.json-provide the progressive webapp features.
+index.js-Entry point of application.
+StrictMode- For security purpose.
+package.json-list of all dependencies that is used in project and project scripts.
+build-converts a respective React component to its html,css and js because browser will now understand React.
+app.js cannot return multiple components to return the multiple components then wrap it inside a single element. There should be only 1 parent element.
+
+ Creates the libraries to 
+ npm create vite@latest second_react_app
+
+
