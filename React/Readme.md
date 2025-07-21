@@ -47,3 +47,19 @@ Purpose of Components: Smallest reusable code.
                        Combined multiple components to build complex user interface.
                        2 types of components-Functional Component - created by function keyword-modern way to create a component
                                             -Class Component - created by class-older way to create a component
+
+************************************************************************************************************************************************
+
+Props:
+properties-props used to pass the data from one component to other.-->Parent to Child component.
+in child component- it is read-only
+props helps makes component reusable-same component with different data
+props can be of any type-string,number,array,object,function.
+Prop-destructuring:
+reading and storing the value in some variables
+
+
+not able to track the updata value od data in react properly, cannot use variable to store or track the value.Should use State
+State:A container to store something, and whose values can be tracked by react, built-in object in React that leads our component to remember value over time.
+useState is used in state
+variable and function which will update the state value
