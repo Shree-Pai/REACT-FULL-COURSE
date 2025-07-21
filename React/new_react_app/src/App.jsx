@@ -3,8 +3,8 @@ import Counter from "./Counter";
 
 function App() {
   return (
-    <div >
-      <h1>Counter App</h1>
+    <div>
+      <h1>Counter</h1>
       <Counter initialValue={0} />
     </div>
   );
