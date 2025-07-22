@@ -59,7 +59,7 @@ Prop-destructuring:
 reading and storing the value in some variables
 
 
-not able to track the updata value od data in react properly, cannot use variable to store or track the value.Should use State
+not able to track the update value od data in react properly, cannot use variable to store or track the value.Should use State
 State:A container to store something, and whose values can be tracked by react, built-in object in React that leads our component to remember value over time.
 useState is used in state
 variable and function which will update the state value
