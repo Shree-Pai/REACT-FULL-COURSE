@@ -7,6 +7,7 @@ import Store from "./Store";
 import Counter from "./Counter";
 import NewComp from "./NewComp";
 import FirstComp from "./FirstComp";
+import FirstEvent from "./FirstEvent";
 function App() {
   
       // function handleClick(){
@@ -36,7 +37,8 @@ function App() {
         {/* <Store/> */}
         {/* <Counter/> */}
         {/* <NewComp/> */}
-        <FirstComp/>
+        {/* <FirstComp/> */}
+          <FirstEvent/>
       </div>
   )
 }
