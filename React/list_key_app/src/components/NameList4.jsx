@@ -1,78 +1,62 @@
 //Adding a New User
 
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Form, Button, ListGroup } from 'react-bootstrap';
 
-
-function NameList4(){
-    const [Students,setStudent]=useState([
-        {id:111,name:"Shree",age:"21"},
-        {id:222,name:"Abhi",age:"21"},
-        {id:333,name:"Krithi",age:"20"},
-        {id:444,name:"Prathzz",age:"16"}
-    ])
+function NameList4() {
+    const [Students, setStudent] = useState([
+        { id: 100, name: "Shree" },
+        { id: 101, name: "Abhi" },
+        { id: 102, name: "Krithi" },
+        { id: 103, name: "Prathzz" }
+    ]);
+    const [nextId, setNextId] = useState(104);
     const [name, setName] = useState('');
-    const [age, setAge] = useState('');
 
     const handleAddStudent = () => {
-        const newStudent = {
-            id: Date.now(),
-            name,
-            age
+        if (name.length == 0) {
+    alert('Please enter a name!');
+    return;
+}
+
+        const newUser = {
+            id: nextId,
+            name: name
         };
 
-        setStudent([...Students, newStudent]);
+        setStudent([...Students, newUser]);
+        setNextId(prevId => prevId + 1);
         setName('');
-        setAge('');
     };
-    return(
-        <div className='container mt-4'>
-            <h2 className='head3'>Student Table:</h2>
-            
-            <Table striped bordered hover responsive>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        Students.map((s)=>(
-                            <tr key={s.id}>
-                                <td>{s.id}</td>
-                                <td>{s.name}</td>
-                                <td>{s.age}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </Table>
-            <Form>
-                <Form.Group className="mb-3">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Enter Your Name"
-                        value={name}
-                        onChange={(s) => setName(s.target.value)}
-                    />
-                    <Form.Label>Age</Form.Label>
-                    <Form.Control
-                        type="number"
-                        placeholder="Enter Your Age"
-                        value={age}
-                        onChange={(s) => setAge(s.target.value)}
-                    />
-                </Form.Group>
-            </Form>
-            <Button variant="success" onClick={handleAddStudent}>Add</Button>
 
+    return (
+        <div>
+            <h2>Student Names: </h2>
+            {/*A form to take the Input*/}
+            <Form.Group>
+                <Form.Control
+                    type="text"
+                    placeholder="Enter new name"
+                    value={name}
+                    onChange={(s) => setName(s.target.value)}
+                />
+                <br />
+                <Button variant="success" onClick={handleAddStudent}>
+                    Add User
+                </Button>
+            </Form.Group> <br />
+
+            <ListGroup >
+                {
+                    Students.map((Student) => (
+                        <ListGroup.Item key={Student.id}>
+                            {Student.id} - {Student.name}
+                        </ListGroup.Item>
+                    ))
+                }
+            </ListGroup>
         </div>
-    )
+    );
 }
 
 export default NameList4;

@@ -1,25 +1,20 @@
-//Rendering a List of Names
-
 function NameList1(){
-
     const Students=[
-        {id:111,name:"Shree",age:"21"},
-        {id:222,name:"Abhi",age:"21"},
-        {id:333,name:"Krithi",age:"20"},
-        {id:444,name:"Prathzz",age:"16"}
+        {id:111,name:"Shree"},
+        {id:222,name:"Abhi"},
+        {id:333,name:"Krithi"},
+        {id:444,name:"Prathzz"}
     ]
     return (
         <div>
-            <div>
-            <h2>Student Lists : </h2>
+            <h2>Student Names: </h2>
             {
-                Students.map((Student)=>
+                Students.map((Student) =>
                     <ul key={Student.id}>
-                        <li>Name:{Student.name} Age:{Student.age}</li>
+                        <li>{Student.name}</li>
                     </ul>
-                   )
+                )
             }
-        </div>
         </div>
     )
 }

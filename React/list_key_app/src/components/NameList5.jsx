@@ -1,6 +1,7 @@
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button'
-import { useState } from 'react';
+//Implement conditional rendering
+
+import React, { useState } from 'react';
+import { Table, Button } from 'react-bootstrap';
 
 function NameList5() {
     const [Students, setStudent] = useState([
@@ -14,43 +15,40 @@ function NameList5() {
         alert(`Delete Student with ID: ${id}`);
         const newStudent = Students.filter((s) => s.id !== id);
         setStudent(newStudent);
-    }
+    };
 
     return (
         <div className='container mt-4'>
             <h2 className='head3'>Student Table:</h2>
-
-            {
-                Students.length > 0 ? (
-                    <Table striped bordered hover responsive>
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Age</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                Students.map((s) => (
-                                    <tr key={s.id}>
-                                        <td>{s.id}</td>
-                                        <td>{s.name}</td>
-                                        <td>{s.age}</td>
-                                        <td>
-                                            <Button variant="danger" size="sm"
-                                                onClick={() => handleDeleteButton(s.id)}>Delete</Button>
-                                        </td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </Table>
-                ) : (
-                    <p>No students available.</p>
-                )
-            }
+            {/*COnditional rendering to display table only if there are students*/}
+            {Students.length > 0 && (
+                <Table striped bordered hover responsive>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            Students.map((s) => (
+                                <tr key={s.id}>
+                                    <td>{s.id}</td>
+                                    <td>{s.name}</td>
+                                    <td>{s.age}</td>
+                                    <td>
+                                        <Button variant="danger" size="sm"
+                                            onClick={() => handleDeleteButton(s.id)}>Delete</Button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </Table>
+            )}
+            {Students.length == 0 && <p>No students available.</p>}
         </div>
     );
 }

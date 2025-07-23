@@ -12,12 +12,16 @@ function App() {
       <div>
         <NameList1/>
         <hr />
+        <br/>
         <NameList2/>
         <hr />
+        <br/>
         <NameList3/>
         <hr />
+        <br/>
         <NameList4/>
         <hr />
+        <br/>
         <NameList5/>
         </div>
     </>
