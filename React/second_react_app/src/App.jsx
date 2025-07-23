@@ -8,6 +8,13 @@ import Counter from "./Counter";
 import NewComp from "./NewComp";
 import FirstComp from "./FirstComp";
 import FirstEvent from "./FirstEvent";
+import FirstList from "./component/FirstList";
+import SecondList from "./component/SecondList";
+import EmployeeList from "./component/EmployeeList";
+import CourseList from "./component/CourseList";
+import TableList from "./component/TableList";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import BootstrapTable from "./component/BootstrapTable";
 function App() {
   
       // function handleClick(){
@@ -38,7 +45,13 @@ function App() {
         {/* <Counter/> */}
         {/* <NewComp/> */}
         {/* <FirstComp/> */}
-          <FirstEvent/>
+          {/* <FirstEvent/> */}
+          {/* <FirstList/> */}
+          {/* <SecondList/> */}
+          {/* <EmployeeList/> */}
+          {/* <CourseList/> */}
+          {/* <TableList/> */}
+          <BootstrapTable/>
       </div>
   )
 }

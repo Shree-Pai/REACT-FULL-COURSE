@@ -68,3 +68,15 @@ variable and function which will update the state value
 ****************************************************************************************************************************************************
 Event:Action performed on browser is Event----Keypressed,mouse released, right or left click.
 event handler manage particular event.
+
+
+****************************************************************************************************************************************************
+List & Key:
+List : Collection of items usually stored inside Array.
+Key : Spacial string attribute that need to be included when creating a list of elements in React.Helps React identify which items have changed or added or removed.It should be unique among siblings.
+
+-------------
+react-bootstrap
+bootstrap
+
+Cannot use for or for of loop inside return hence Map is used.
