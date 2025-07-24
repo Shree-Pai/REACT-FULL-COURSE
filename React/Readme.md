@@ -80,3 +80,29 @@ react-bootstrap
 bootstrap
 
 Cannot use for or for of loop inside return hence Map is used.
+
+*****************************************************************************************************************************************************
+Life Cycle:
+the stages from creation to deletion of an component is the life cycle of components.
+Inbuilt methods of React which can run on different stages is React life cycle method-used only with class based components.
+
+Major Life cycle Phases in Class Component:
+-Mounting : When component is created and inseted with DOM is Mounting.
+-Updating : Component is Updated due to state and props changes is called Updating Stage.
+-Unmounting : Remove the component from DOM.
+
+Methods for Mounting Phase:
+constructor() - initial state and binds the method.
+static getDerivedStateFromProps() - Sync the state with props.
+render() - return the jsx or User interface.
+componentDidMount() - Write the side effect.
+
+Methods for Updating Phase:
+static getDerivedStateFromProps()- again called when component is re-rendered.
+shouldComponentUpdate() - Decide whether to update the component or not(return true or false value).
+render() - Invoked again when component is updated.
+getSnapshotBeforeUpdate() - capture DOm value before update.
+componentDidUpdate() - runs side-effect after DOM update.
+
+Methods for Unmounting Phase:
+componentWillUnmount()

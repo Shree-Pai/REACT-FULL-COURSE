@@ -15,6 +15,9 @@ import CourseList from "./component/CourseList";
 import TableList from "./component/TableList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapTable from "./component/BootstrapTable";
+import LifeCycleFirst from "./life_cycle_component/LifeCycleFirst";
+import LifeCycleSecond from "./life_cycle_component/LifeCycleSecond";
+import LifeCycleThird from "./life_cycle_component/LifeCycleThird";
 function App() {
   
       // function handleClick(){
@@ -51,7 +54,10 @@ function App() {
           {/* <EmployeeList/> */}
           {/* <CourseList/> */}
           {/* <TableList/> */}
-          <BootstrapTable/>
+          {/* <BootstrapTable/> */}
+          {/* <LifeCycleFirst/> */}
+          {/* <LifeCycleSecond/> */}
+          <LifeCycleThird/>
       </div>
   )
 }
