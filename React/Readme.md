@@ -105,4 +105,39 @@ getSnapshotBeforeUpdate() - capture DOm value before update.
 componentDidUpdate() - runs side-effect after DOM update.
 
 Methods for Unmounting Phase:
-componentWillUnmount()
+componentWillUnmount() - Write the side effect.
+
+*************************************************************************************************************************************
+Hooks:
+Hooks is special type of function introduced in React to use state and other functions in Functional component without creating class components.
+Usestate is used as Hook
+
+Types of hooks:
+useState - If state is used inside functional component. State is used inside functional component 
+useEffect - With the help of useEffects we can write side effects in Webpage - when component is mounted,updated or unmounted
+        useEffect(()=>{},an array of dependencies) provide the dependences when the useEffect has to be executed as component did update.
+useMemo - It is React Hook that memoizes the result of an expensive(function that takes lots of time (time consuming)) function and only recomputes it when its dependency change.
+        useMemo(()=>{},dependency array) 
+useRef - It is React Hook that returns a mutable reference object which persist across the renders. access the dom element,store previous value,avoid re-render on update not a best practice to use document,getelementbyId in React instead use useRef()
+ForwardRef()
+
+custom Hook:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
