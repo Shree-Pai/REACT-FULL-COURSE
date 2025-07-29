@@ -1,0 +1,260 @@
+/* Reset & Box Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Themes */
+body.light {
+  background: linear-gradient(135deg, #f7f8fa 0%, #e9ecf3 100%);
+  color: #232323;
+  --card-bg: #ffffff;
+  --card-text: #232323;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --input-hover: #e3e3e3;
+  --button-bg: #f1c40f;
+  --button-text: #222;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #18191a 0%, #232323 100%);
+  color: #ffffff;
+  --card-bg: #232323;
+  --card-text: #ffffff;
+  --input-bg: #18191a;
+  --input-border: #444;
+  --input-hover: #333;
+  --button-bg: #222;
+  --button-text: #f1c40f;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.4s, color 0.4s;
+  padding: 1rem;
+}
+
+/* App Container */
+.task-app-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: background 0.4s, color 0.4s;
+  animation: fadeInCard 0.7s ease;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Theme Toggle */
+.theme-toggle-row {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-toggle-row button {
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-row button:hover {
+  background: #ffe066;
+  transform: translateY(-2px);
+}
+
+body.dark .theme-toggle-row button:hover {
+  background: #333;
+  color: #ffe066;
+}
+
+/* Divider */
+.theme-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+body.dark .theme-divider {
+  border-top: 1px solid #444;
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Form */
+.task-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--card-text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+form input[type="text"]:focus {
+  border-color: #f1c40f;
+  box-shadow: 0 0 0 2px #ffe06644;
+  outline: none;
+}
+
+form button[type="submit"] {
+  padding: 0 1.5rem;
+  height: 48px;
+  font-weight: bold;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background: #ffe066;
+  transform: translateY(-2px);
+}
+
+body.dark form button[type="submit"]:hover {
+  background: #333;
+  color: #ffe066;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Task Item */
+li {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+li:hover {
+  background: var(--input-hover);
+}
+
+li strong {
+  font-weight: 700;
+}
+
+li .edit-inputs ,.edit-row {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+li .edit-inputs,.edit-row input[type="text"] {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--card-text);
+}
+
+li .edit-inputs ,.edit-row input[type="text"]:focus {
+  border-color: #f1c40f;
+  box-shadow: 0 0 0 2px #ffe06644;
+  outline: none;
+}
+
+li .action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+li .edit-actions button, .icon-btn {
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /* white-space: nowrap; */
+}
+
+/* Button Colors */
+li .save-btn {
+  background: #27ae60;
+  color: #fff;
+}
+li .save-btn:hover {
+  background: #219150;
+}
+
+li .cancel-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+li .cancel-btn:hover {
+  background: #c0392b;
+}
+
+li .edit-btn {
+  background: #646cff;
+  color: #fff;
+}
+li .edit-btn:hover {
+  background: #535bf2;
+}
+.icon-btn{
+  background-color: #f1c40f;
+}
+.icon-btn:hover{
+  background-color: #ffe066;
+}

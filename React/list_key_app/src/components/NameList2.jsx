@@ -10,12 +10,14 @@ function NameList2(){
         {id:333,name:"Krithi",age:"20"},
         {id:444,name:"Prathzz",age:"16"}
     ]
+    //Function to handle delete button click that alerts the ID of the student
     const handleDeleteButton=(id)=>{
         alert(`Delete Students with ID : ${id}`);
     }
     return(
         <div className='container mt-4'>
             <h2 className='head3'>Student Table:</h2>
+            {/*Bootstrap table*/ }
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>

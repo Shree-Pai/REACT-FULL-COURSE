@@ -124,6 +124,58 @@ ForwardRef()
 custom Hook:
 
 
+**************************************************************************************************************************
+
+Context API: Global storage through which we can share data in the hierarchical components
+Props drilling to resolve this conext API is used
+
+create context method - able to create the global storage
+context provider - provider will pass 2 things - value and children 
+use context-Hook - to get the value from storage.
+
+***************************************************************************************************************************
+Local Storage:
+Local Storage is a client side storage that allow us to store the data in the browser.Data is available even after refreshing page the data is available.
+It is a key value pair storage.
+It is a string based storage.
+It is a permanent storage.
+It is a browser storage.
+Size is approx 5MB.
+remember tokens during login.
+remember the cart items.
+remember the search history.
+remember the user preferences.
+remember the user settings.
+remember the user data.
+
+Methods:
+setItem() - to set the item in the local storage.
+getIteam() - to get the item from the local storage.
+removeItem() - to remove the item from the local storage.
+clearItem() - to clear the local storage.
+
+json.stringy file - to convert the data into string.
+json.parse file - to convert the string into data type.
+
+
+Session storage:
+Session storage is a client side storage that allow us to store the data in the browser temporarily
+It is a key value pair storage.
+It is a string based storage.
+It is a temporary storage.Only available with the current session of browser.
+Data limit size is 5MB.
+When we go for session storage?
+1. When we want to store the data temporarily.
+2. When we want to store the data for the current session of browser.
+3. When we want to store the data for the current tab of browser.
+i4. When we want to store the data for the current window of browser.
+
+Methods same as local storage.
+
+
+
+
+
 
 
 

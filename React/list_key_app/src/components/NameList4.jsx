@@ -12,18 +12,18 @@ function NameList4() {
     ]);
     const [nextId, setNextId] = useState(104);
     const [name, setName] = useState('');
-
+    //Handles new student addition
     const handleAddStudent = () => {
         if (name.length == 0) {
     alert('Please enter a name!');
     return;
 }
-
+        //Creating a new user object
         const newUser = {
             id: nextId,
             name: name
         };
-
+        //Adding new user to the list
         setStudent([...Students, newUser]);
         setNextId(prevId => prevId + 1);
         setName('');
@@ -45,12 +45,12 @@ function NameList4() {
                     Add User
                 </Button>
             </Form.Group> <br />
-
+            {/*Displaying the list of names*/}
             <ListGroup >
                 {
-                    Students.map((Student) => (
+                    Students.map((Student) => ( 
                         <ListGroup.Item key={Student.id}>
-                            {Student.id} - {Student.name}
+                            {Student.id} - {Student.name} {/*Displaying ID and Name*/}
                         </ListGroup.Item>
                     ))
                 }
