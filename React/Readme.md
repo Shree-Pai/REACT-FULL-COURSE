@@ -173,7 +173,17 @@ i4. When we want to store the data for the current window of browser.
 Methods same as local storage.
 
 
+*************************************************************************************************************************
+React Routing:
+React Routing is a way to navigate between different components in a React application.
+It is used to manage the state of the application.
 
+When we use React Routing , we need to have BrowserRouter, Routes, Route
+BrowserRouter - parent component that keeps user interface sync with the URL.
+Routes-container that has multiple route.Container for Route component.
+Route- map our URL with the particular component. Multiple routes can be inside the Route.
+
+Search Param:URL query parameter: it is value after question mark in URL.It is also called as Query Filter.
 
 
 
