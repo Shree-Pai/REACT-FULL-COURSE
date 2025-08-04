@@ -13,6 +13,9 @@ import FirstForm from './form/FirstForm';
 import SecondForm from './form/SecondForm';
 import ThirdForm from './form/ThirdForm';
 import FourthForm from './form/FourthForm';
+import FormValid from './external_form/FormValid';
+import RegistrationForm from './external_form/RegistrationForm';
+import FormValid2 from './external_form/FormValid2';
 
 function App() {
 
@@ -52,11 +55,14 @@ function App() {
       //   </Routes>
       // </BrowserRouter>
       <div>
-        <h1>Form Handling</h1>
+        {/* <h1>Form Handling</h1> */}
         {/* <FirstForm/> */}
         {/* <SecondForm/> */}
         {/* <ThirdForm/> */}
-        <FourthForm/>
+        {/* <FourthForm/> */}
+        {/* <FormValid/> */}
+        {/* <RegistrationForm/> */}
+        <FormValid2/>
       </div>
   )
 }

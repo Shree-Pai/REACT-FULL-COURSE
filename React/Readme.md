@@ -196,6 +196,9 @@ email format
 password rules
 min =, max length
 
+React Form with Hook:
+
+
 
 
 
