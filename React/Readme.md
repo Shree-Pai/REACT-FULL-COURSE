@@ -198,15 +198,62 @@ min =, max length
 
 React Form with Hook:
 
+***************************************************************************************************************************************************
+Redux:
+js library used to manage the state of application. central Data ware house hence data is consistence. Where all the data is stored and managed in predictible way.
+Mainly required to scatter states in many components.
+To overcome the props drilling redux can be used.
+Easy to use in large scale house.
+
+When redux is required?
+When there are multiple components share the data redux is used.
+Complex data flow management.
+When building a large application.
+when we want predictable and testable states udpates.
+
+When redux is not required?
+When the app is very small
+few components.
+data is managed with usestates.
+
+->Store - holds the entire data/state of application.
+        1 Store for an redux app.
 
 
+->Action - Describes what happened an event.
+        Action is an simple js object that describes what we want to do.
+        Action have 2 things 
+                1. Type of the action - required field/data
+                2. Payload - Optional data want to send with action
 
 
+->Reducer - Decides how to change the state/data.
+        reducer is a function that decides how to update the state based on the action.
 
 
+->Dispatch - Sends an action to the reducer.
+        Send an action to store - reducer - 
 
 
+->UI(Subscriber) - React component that uses states or data managed by the store.
+        React component uses useSelector to implement.
+        useDispatch for dispatching an action.
 
+                _________________________________________
+                |                                       |   
+                |         User CLick->Button            |             
+                |                                       |   
+                |       dispatch(send action)           |
+                |                                       |
+                |       Store receives action           |
+                |                                       |
+                |      Reducer process action           |
+                |                                       |
+                |      New state returned to store      |
+                |                                       |
+                |   React UI re-renders with new state  |
+                |                                       |
+                |_______________________________________|
 
 
 
