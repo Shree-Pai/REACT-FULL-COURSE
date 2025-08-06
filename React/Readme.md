@@ -240,9 +240,9 @@ data is managed with usestates.
         useDispatch for dispatching an action.
 
                 _________________________________________
-                |                                       |   
-                |         User CLick->Button            |             
-                |                                       |   
+                |                                       |
+                |         User CLick->Button            |
+                |                                       |
                 |       dispatch(send action)           |
                 |                                       |
                 |       Store receives action           |
@@ -256,12 +256,37 @@ data is managed with usestates.
                 |_______________________________________|
 
 
+*************************************************************************************************************************************************
 
+API : Set of rules and protocols that allows 2 software to communicate with each other.
+Rest API : Representational State Transfer API.
+set of rules to build the scalable web service using http.This is stateless.
 
+Stateless : because it follows the http protocal.
+Client-Server : 
+HTTP Methods : GET,POST,PUT and DELETE, etc
+GET: retrieve the data from server.
+POST: creatng data is server side.
+PUT: Update the data.
+DELETE: To delete any data.
+Endpoint : URL through which the method is executed.
+        api/users ->GET
+        api/users ->POST
 
+->JSON : Javascript object notation.
+->Status Code : 3-digit number.
+->200 - OK
+->201 - Created
+->204 - No Content
+->400 - Bad Request
+->401 - Unauthorized
+->404 - Not Found
+->500 - Internal Server error
 
+->Axios : its used because of cleaner syntax and additional features compared to fetch.
 
+->Middleware : A function that is between action and reducer.Intersect,modify delay or cancel before they reaches to reducer.
+any asynchronous operation to perform.
+npm install react-redux thunk
 
-
-
-
+->Error Handling : gracefully catching and managing the errors in application so tht users doesnot face blank screen.
