@@ -290,3 +290,12 @@ any asynchronous operation to perform.
 npm install react-redux thunk
 
 ->Error Handling : gracefully catching and managing the errors in application so tht users doesnot face blank screen.
+
+*************************************************************************************************************************************************
+Error Boundary - special type of class component that catches a javascript error anywhere in its child component tree.Log those error and siplay a call back UI instead of crashing the UI.
+
+
+TypeScript : Sibbling of Javascript.
+Typescript can know error before running code. 
+
+npm create vite@latest my_typescript_app --template typescript

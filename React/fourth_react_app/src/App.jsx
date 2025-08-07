@@ -8,6 +8,8 @@ import Counter from './components/Counter'
 import ProductList from './components/ProductList'
 import Fetch from './middleware/Fetch'
 import FirstError from './error/FirstError'
+import Second from './error/Second'
+import ErrorBoundary from './error/ErrorBoundary'
 
 function App() {
   
@@ -23,7 +25,10 @@ function App() {
       {/* <SecondUserList/> */}
       {/* <UserListAxios/> */}
       {/* <Fetch/> */}
+      <ErrorBoundary>
       <FirstError name="Shree"/>
+      <Second/>
+      </ErrorBoundary>
     </div>
   )
 }
