@@ -306,3 +306,6 @@ testing the component that way we expect.
 Jest : JavaScript testing framework by Facebook. Runs tests, provides assertions, mocks, coverage.
 RTL :Helps test React components by focusing on user interactions and what’s rendered, not implementation details.mainly focus on wt the user see nt on the implementation.
 CRA tool bydefault gives the testing libraries.
+
+For vite testing: https://dev.to/teyim/effortless-testing-setup-for-react-with-vite-typescript-jest-and-react-testing-library-1c48
+
