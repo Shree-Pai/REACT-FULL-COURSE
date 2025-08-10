@@ -26,81 +26,59 @@ function BankDetails() {
   };
 
   return (
-    <div style={{ maxWidth: 500,
-      margin: 'auto',
-      padding: 20,
-      fontFamily: 'Arial, sans-serif',
-      backgroundColor: '#f9f9f9',
-      borderRadius: 6,
-      boxShadow: '0 2px 6px rgba(0,0,0,0.1)'}}>
-      <h2 style={{ textAlign: 'center' }}>Bank Details</h2>
+    <div className="form-container">
+      <h2>Bank Details</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* Account Number */}
-        <div style={{ marginBottom: '15px' }}>
-          <label>Bank Account Number:</label><br />
+        <div className="form-group">
+          <label>Bank Account Number:</label>
           <input
             type="text"
             {...register('accountNumber', {
               required: 'Account number required',
               pattern: { value: /^[0-9]{9,18}$/, message: '9-18 digits only' },
             })}
-            style={{ width: '100%', padding: '8px' }}
           />
-          {errors.accountNumber && <p style={{ color: 'red' }}>{errors.accountNumber.message}</p>}
+          {errors.accountNumber && (
+            <p className="error-text">{errors.accountNumber.message}</p>
+          )}
         </div>
 
-        {/* IFSC */}
-        <div style={{ marginBottom: '15px' }}>
-          <label>IFSC Code:</label><br />
+        <div className="form-group">
+          <label>IFSC Code:</label>
           <input
             type="text"
             {...register('ifsc', {
               required: 'IFSC code required',
               validate: validateIFSC,
             })}
-            style={{ width: '100%', padding: '8px' }}
           />
-          {errors.ifsc && <p style={{ color: 'red' }}>{errors.ifsc.message}</p>}
+          {errors.ifsc && <p className="error-text">{errors.ifsc.message}</p>}
         </div>
 
-        {/* PAN */}
-        <div style={{ marginBottom: '15px' }}>
-          <label>PAN Number:</label><br />
+        <div className="form-group">
+          <label>PAN Number:</label>
           <input
             type="text"
             {...register('pan', {
               required: 'PAN number required',
               validate: validatePAN,
             })}
-            style={{ width: '100%', padding: '8px' }}
           />
-          {errors.pan && <p style={{ color: 'red' }}>{errors.pan.message}</p>}
+          {errors.pan && <p className="error-text">{errors.pan.message}</p>}
         </div>
 
-        {/* UPI */}
-        <div style={{ marginBottom: '15px' }}>
-          <label>UPI ID (optional):</label><br />
+        <div className="form-group">
+          <label>UPI ID (optional):</label>
           <input
             type="text"
             {...register('upi', {
               validate: validateUPI,
             })}
-            style={{ width: '100%', padding: '8px' }}
           />
-          {errors.upi && <p style={{ color: 'red' }}>{errors.upi.message}</p>}
+          {errors.upi && <p className="error-text">{errors.upi.message}</p>}
         </div>
 
-        <button
-          type="submit"
-          style={{
-            marginTop: '20px',
-            padding: '10px 20px',
-            fontSize: '16px',
-            cursor: 'pointer',
-            display: 'block',
-            marginLeft: 'auto',
-          }}
-        >
+        <button type="submit" className="submit-button">
           Next
         </button>
       </form>

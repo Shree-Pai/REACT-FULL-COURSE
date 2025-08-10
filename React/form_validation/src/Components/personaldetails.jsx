@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { FormContext } from '../App';
+import '../App.css';
 
 function PersonalDetails() {
   const { state, dispatch } = useContext(FormContext);

@@ -7,8 +7,7 @@ import EmergencyContacts from './Components/EmergencyContact';
 import DocumentUpload from './Components/DocumentUpload';
 import ReviewSubmit from './Components/ReviewSubmit';
 import ProgressBar from './Components/ProgressBar';
-
-
+// import './App.css'; 
 
 const initialState = {
   personal: {},
